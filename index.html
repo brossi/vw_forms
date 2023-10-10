@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Village Woodcrafts Inc. - Finish Sample Label Generator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body>
+    <div class="commonControls">
+      <select id="labelType">
+        <option value="avery5164" selected>Avery 5164 - 3.3" x 4", 2 by 3</option>
+        <option value="avery5163">Avery 5163 - 2" x 4", 2 by 5</option>
+      </select>
+    </div>
+    <div>Header Block with VW Info</div>
+    <div class="avery5164">
+      <table>
+        <tr>
+            <td>Customer</td>
+            <td>CUSTOMER_NAME</td>
+        </tr>
+        <tr>
+            <td>Project</td>
+            <td>PROJECT_NAME_AND-OR_ID</td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>CREATION_DATE</td>
+        </tr>
+        <tr>
+            <td>Material</td>
+            <td>MATERIAL_DESC</td>
+        </tr>
+        <tr>
+            <td>Coating</td>
+            <td>COATING_DESC</td>
+        </tr>
+        <tr>
+            <td>Color / Sheen</td>
+            <td>COLOR_SHEEN_DESC</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>NOTES_TEXT</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $("td").each(function() {
+          const cell = $(this);
+          const originalFontSize = parseInt(cell.css("font-size"));
+          const originalHeight = cell.height();
+          const originalWidth = cell.width();
+          const text = cell.text();
+          let fontSize = originalFontSize;
+          while (cell.height() > originalHeight || cell.width() > originalWidth) {
+            fontSize--;
+            cell.css("font-size", fontSize + "px");
+          }
+        });
+      });
+    </script>
+</body>
+</html>
