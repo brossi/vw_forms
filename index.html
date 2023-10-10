@@ -3,8 +3,10 @@
 <head>
     <title>Village Woodcrafts Inc. - Finish Sample Label Generator</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bli8xzz.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 <body>
     <div class="commonControls">
@@ -13,36 +15,49 @@
         <option value="avery5163">Avery 5163 - 2" x 4", 2 by 5</option>
       </select>
     </div>
-    <div>Header Block with VW Info</div>
-    <div class="avery5164">
+    <div class="label avery5164">
+      <header>
+        <img src="vw_label_header.jpg" alt="Village Woodcrafts Inc., +1 323-224-8880, CA License #622535" />
+      </header>
+      <hr class="divider" />
       <table>
         <tr>
             <td>Customer</td>
-            <td>CUSTOMER_NAME</td>
+            <td>
+              <input type="text" id="customer" />
+            </td>
         </tr>
         <tr>
             <td>Project</td>
-            <td>PROJECT_NAME_AND-OR_ID</td>
+            <td>
+              <div class="grow-wrap">
+                <textarea type="text" id="project" cols="39" rows="2" wrap="hard" maxlength="78"></textarea>
+              </div>
+            </td>
         </tr>
-        <tr>
+        <tr class="date">
             <td>Date</td>
-            <td>CREATION_DATE</td>
+            <td>
+              <input type="text" id="date" />
+            </td>
         </tr>
         <tr>
             <td>Material</td>
-            <td>MATERIAL_DESC</td>
+            <td>
+              <input type="text" id="material" />
+            </td>
         </tr>
         <tr>
             <td>Coating</td>
-            <td>COATING_DESC</td>
-        </tr>
-        <tr>
-            <td>Color / Sheen</td>
-            <td>COLOR_SHEEN_DESC</td>
+            <td>
+              <textarea type="text" id="coating" cols="39" rows="2" wrap="hard" maxlength="78"></textarea>
+            </td>
         </tr>
         <tr>
             <td>Notes</td>
-            <td>NOTES_TEXT</td>
+            <td>
+              <textarea type="text" id="notes" cols="39" rows="3" wrap="hard" maxlength="117"></textarea>
+            </td>
         </tr>
       </table>
     </div>
