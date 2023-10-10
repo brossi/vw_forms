@@ -1,4 +1,60 @@
+body {
+  font-family: "roboto-condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222;
+  padding: 24px;
+}
+
+.label {
+  box-sizing: border-box !important;
+}
+
 .avery5164 {
-  width: 1196px;
-  height: 986px;
+  margin-top: 24px;
+  width: 4in;
+  max-width: 4in;
+  height: 3.34in;
+  max-height: 3.34in;
+  border: 1px solid red;
+  padding: 0.125in;
+}
+.avery5164 header {
+  height: 0.5in;
+  max-height: 0.5in;
+}
+.avery5164 header img {
+  height: 100%;
+  max-width: 100%;
+}
+.avery5164 hr.divider {
+  height: 1px;
+  border: none;
+  background-color: #aaa;
+}
+.avery5164 table {
+  width: 100%;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+.avery5164 table tr.date td {
+  padding-bottom: 0.0875in;
+}
+.avery5164 table td {
+  vertical-align: top;
+}
+.avery5164 table td input, .avery5164 table td textarea {
+  width: 100%;
+  max-width: 100%;
+  text-transform: uppercase;
+}
+.avery5164 table td:nth-child(1) {
+  width: 0.5in;
+  font-size: 8pt;
+  text-align: right;
+}
+.avery5164 table td:nth-child(2) {
+  font-size: 11pt;
+  text-align: left;
+  padding-left: 0.125in;
 }
