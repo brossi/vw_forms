@@ -60,22 +60,5 @@
         </tr>
       </table>
     </div>
-
-    <script>
-      $(document).ready(function() {
-        $("td").each(function() {
-          const cell = $(this);
-          const originalFontSize = parseInt(cell.css("font-size"));
-          const originalHeight = cell.height();
-          const originalWidth = cell.width();
-          const text = cell.text();
-          let fontSize = originalFontSize;
-          while (cell.height() > originalHeight || cell.width() > originalWidth) {
-            fontSize--;
-            cell.css("font-size", fontSize + "px");
-          }
-        });
-      });
-    </script>
 </body>
 </html>
