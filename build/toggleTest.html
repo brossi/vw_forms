@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid with Toggle Button</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-gap: 10px;
+        }
+
+        .grid-item {
+            background-color: #EEEEEE;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .grid-item button {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: #333333;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .grid-item.active {
+            background-color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="grid-item">
+            <button>Toggle</button>
+        </div>
+        <div class="grid-item">
+            <button>Toggle</button>
+        </div>
+        <div class="grid-item">
+            <button>Toggle</button>
+        </div>
+        <div class="grid-item">
+            <button>Toggle</button>
+        </div>
+        <div class="grid-item">
+            <button>Toggle</button>
+        </div>
+        <div class="grid-item">
+            <button>Toggle</button>
+        </div>
+    </div>
+
+    <script>
+        const gridItems = document.querySelectorAll('.grid-item');
+
+        gridItems.forEach(item => {
+            const button = item.querySelector('button');
+            button.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
