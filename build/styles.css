@@ -47,15 +47,24 @@ body {
   width: 100%;
   max-width: 100%;
   text-transform: uppercase;
+  border: 1px solid transparent;
   outline: none;
+  overflow: hidden;
 }
-.avery5164 table td input:hover, .avery5164 table td input:focus, .avery5164 table td textarea:hover, .avery5164 table td textarea:focus {
-  outline: dotted;
+.avery5164 table td input:hover, .avery5164 table td textarea:hover {
+  background-color: rgba(200, 200, 200, 0.25);
+}
+.avery5164 table td input:focus, .avery5164 table td textarea:focus {
+  border: 1px solid #999;
+}
+.avery5164 table td textarea {
+  resize: none;
 }
 .avery5164 table td:nth-child(1) {
   width: 0.5in;
   font-size: 8pt;
   text-align: right;
+  padding-top: 0.09in;
 }
 .avery5164 table td:nth-child(2) {
   font-size: 11pt;
